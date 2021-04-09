@@ -46,7 +46,9 @@ def getInfos(soup):
 error = True
 while error:
     try:
-        driver = webdriver.Firefox(executable_path="C:\\Users\\leona\\Documents\\GeckoDriver\\geckodriver.exe")
+        # Após 'executable_path', deve-se colocar o caminho onde driver do navegador está salvo
+        # Esse exemplo foi feito com o geckodriver (WebDriver para Firefox), mas pode-se utilizar os drivers de outros navegadores
+        driver = webdriver.Firefox(executable_path="")
         driver.get("https://www.cptm.sp.gov.br/sua-viagem/Pages/Linhas.aspx")
         driver.maximize_window()
         for i in range(0, 2, 1):
